@@ -249,8 +249,9 @@ def create_geo_map(df):
         mapbox_style="carto-positron"
     )
     
+    # FIX: Remove invalid 'line' property for scattermapbox markers
     fig.update_traces(
-        marker=dict(line=dict(width=2, color='white'), opacity=0.85),
+        marker=dict(size=8, opacity=0.85),
         selector=dict(mode='markers')
     )
     
